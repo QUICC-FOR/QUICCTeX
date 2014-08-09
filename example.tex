@@ -1,0 +1,55 @@
+\documentclass[10pt,aspectratio=149]{beamer}
+
+\usecolortheme{Calm}
+\usetheme{Calm}
+
+\usepackage{minted}
+\usemintedstyle{pastie}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{shapes, arrows, positioning}
+
+\author{Timoth\'ee Poisot}
+\title{talk title}
+\subtitle{talk subtitle}
+\date{\today}
+\institute{talk location}
+
+\begin{document}
+
+\begin{frame}[plain]
+   \titlepage
+\end{frame}
+
+\begin{frame}
+   \frametitle{frame title}
+   \framesubtitle{subtitle}
+   \paper{references}
+
+   frame content
+   
+\end{frame}
+
+\begin{frame}[fragile]
+   \frametitle{frame title}
+   \framesubtitle{with code}
+
+   \begin{minted}[mathescape,linenos]{julia}
+function n_3_col(A::Array)
+   S = size(A)
+   p_col = mean(A, 1)
+   R = zeros(A)
+   for j in 1:S[2]
+      for i in 1:S[1]
+         R[i,j] = int(rand() <= p_col[j])
+      end
+   end
+   return R
+end
+   \end{minted}
+   
+\end{frame}
+
+\end{document}
