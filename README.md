@@ -5,4 +5,4 @@ QUICC-FOR on TeX
 
 LateX presentation template build for the QUICC-FOR Project
 
-Inspired from [@poisot](https://github.com/tpoisot)
+Inspired from [@tpoisot](https://github.com/tpoisot)
